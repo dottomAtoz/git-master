@@ -157,17 +157,26 @@
 
 		@media only screen and (max-width:425px) {}
 
-		@media only screen and (max-width:768px) {}
-
-		@media only screen and (max-width:1000px) {}
+		@media only screen and (max-width:768px) {
+			header {
+				height: 70%;
+			}
+		}
 
 		@media only screen and (max-width:1024px) {
-/*
-			.nav-sosmed a i {
-				font-size: 24px;
-				letter-spacing: 5px
+			header {
+				height: 90vh;
 			}
-*/
+
+			.atozpay-agen img {
+				width: 60%;
+			}
+
+			.atozpay-agen .container img {
+				top: 470px;
+				width: 35%;
+				right: 100px;
+			}
 		}
 
 	</style>
@@ -253,13 +262,9 @@
 					<div class="atozagen">
 						<h1>Tambah penghasilan dengan Atozpay Agen</h1>
 						<p>Maksimalkan penghasilan usahamu hingga jutaan rupiah dan dapatkan keuntungan di setiap transaksinya</p>
-						<div class="sub-atozagen-daftar">
-							<div class="row">
-								<a href="#" class="btn btn-daftar">Daftar Agen</a>
-							</div>
-						</div>
+
 						<div class="sub-atozagen-benefit">
-							<h3>Keuntungan menjadi Agen Atozpay untuk usahamu</h3>
+							<h3 class="mt-5">Keuntungan menjadi Agen Atozpay untuk usahamu</h3>
 							<ul>
 								<li>Layanan produk lengkap dengan harga terbaik</li>
 								<li>Komisi menguntungkan setiap transaksi</li>
@@ -267,6 +272,13 @@
 								<li>Layanan support terbaik dari Customer Service dan Sales Team</li>
 							</ul>
 						</div>
+
+						<div class="sub-atozagen-daftar">
+							<div class="row">
+								<a href="#" class="btn btn-daftar">Daftar Agen</a>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
