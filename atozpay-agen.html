@@ -31,7 +31,7 @@
 			width: 100%;
 		}
 
-		header .container h1 {
+		header .tagline h1 {
 			font-family: 'axiformaBold';
 			text-transform: uppercase;
 			/*	font-size: 55px;*/
@@ -39,14 +39,14 @@
 			color: #f2693e;
 		}
 
-		header .container p {
+		header .tagline p {
 			font-family: 'axiformaBold';
 			/*	font-size: 30px;*/
 			font-size: 2.5em;
 			color: white;
 		}
 
-		header .container span {
+		header .tagline span {
 			font-family: 'axiformaBold';
 			/*	font-size: 25px;*/
 			font-size: 2em;
@@ -72,6 +72,7 @@
 			-webkit-transition: background 5s ease;
 			-o-transition: background 5s ease;
 			transition: background 5s ease;
+			z-index: 1;
 		}
 
 		.atozpay-agen .container img {
@@ -84,6 +85,8 @@
 
 		.atozagen {
 			font-family: 'axiformaBold';
+			position: relative;
+			z-index: 2;
 		}
 
 		.atozagen h3 {
@@ -155,11 +158,46 @@
 
 		@media only screen and (max-width:375px) {}
 
-		@media only screen and (max-width:425px) {}
+		@media only screen and (max-width:425px) {
+			.atozpay-agen h1 {
+				font-size: 35px;
+			}
+
+			header .tagline {
+				font-size: 7px;
+				line-height: 15px;
+			}
+
+			header {
+				height: auto !important;
+			}
+
+			.atozpay-agen {
+				padding: 20px;
+			}
+
+			.atozpay-agen img {
+				width: 45% !important;
+				opacity: 0.6;
+			}
+
+			.atozpay-agen .container img {
+				display: none;
+			}
+
+			.download-button {
+				padding: 20px;
+			}
+		}
 
 		@media only screen and (max-width:768px) {
 			header {
-				height: 70%;
+				height: 70vh;
+			}
+
+			.btn-daftar {
+				padding: auto;
+				width: auto;
 			}
 		}
 
@@ -245,7 +283,7 @@
 
 		<div class="container">
 			<div class="d-flex" style="line-height: 35px;">
-				<div class="w-100">
+				<div class="tagline">
 					<h1>Atozpay Agen</h1>
 					<p>Tambah penghasilan dengan Atozpay Agen</p>
 					<span>#SemuaBisa</span>
@@ -323,7 +361,7 @@
 				<div class="col-md-3 col-sm-12">
 					<div class="footer-pnl">
 						<h3>Support</h3>
-						<p>helpdesk@atozpay.co.id</p>
+						<p>helpdesk @atozpay.co.id</p>
 						<p>for Investor Relation please contact this email address : ir@atozpay.co.id</p>
 						<p>+62 21 8354116 / +62 21 8354117</p>
 					</div>
