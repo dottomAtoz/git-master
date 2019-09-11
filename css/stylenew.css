@@ -101,7 +101,7 @@
 
 	header .tagline {
 		position: absolute;
-		bottom: 0;
+		bottom: 10px;
 		z-index: 2;
 		line-height: 35px;
 	}
@@ -122,6 +122,19 @@
 		top: 0;
 		left: 0;
 		z-index: 1;
+	}
+
+	.mobile-header {
+		display: none;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	.mobile-header img {
+		position: relative;
+		top: 200px;
 	}
 
 	.overlay {
@@ -580,7 +593,8 @@
 
 	.atozpayagen {
 		font-family: "axiformaBold";
-		background-image: url(../img/atozpay/wormz.png);
+		background-image: url(../img/atozpay/gedung.jpg);
+		background-attachment: fixed;
 		background-repeat: repeat;
 		background-color: #236062;
 		color: white;
@@ -853,9 +867,6 @@
 	*/
 
 	@media only screen and (max-width:375px) {
-		header video {
-			display: none;
-		}
 
 		.atozpayagen .icon-atozpayagen {
 			bottom: -30px;
@@ -874,10 +885,24 @@
 	}
 
 	@media only screen and (max-width:425px) {
+		header {
+			background-color: orange;
+		}
+
+		header video {
+			display: none;
+		}
+
+		.mobile-header {
+			display: block;
+		}
 
 		header .tagline {
 			line-height: 35px;
 			font-size: 13px;
+			bottom: auto;
+			top: 117px;
+			text-align: center;
 		}
 
 		nav ul {
