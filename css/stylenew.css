@@ -409,7 +409,7 @@
 	}
 
 	.atozgo {
-		padding: 50px 5px;
+		padding: 80px 5px;
 		/*	min-height: 600px;*/
 		position: relative;
 		background-color: #fff;
@@ -476,11 +476,14 @@
 		color: white;
 	}
 
+	.navbar .navbar-toggler-icon {
+		background-image: url('../img/atozpay/hamburger1.svg') !important;
+	}
 
 	.sub-atozgo {
 		padding: 50px 50px 100px 50px;
-		background-color: #f8f8f8;
-		background-image: url(../img/atozpay/halftone-yellow.png);
+		background-color: #f5d9cc;
+		/*		background-image: url(../img/atozpay/halftone-yellow.png);*/
 		background-repeat: repeat;
 		position: relative;
 		overflow: hidden;
