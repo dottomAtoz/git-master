@@ -425,6 +425,21 @@
 		color: #f2693e;
 	}
 
+	.hand {
+		display: none;
+		position: absolute;
+		left: 0;
+		bottom: -100px;
+		width: 100%;
+		text-align: center;
+	}
+
+	.hand img {
+		width: 250px;
+		max-width: 100%;
+		height: auto;
+	}
+
 	.go-ride .go-img {
 		margin: 60px auto;
 	}
@@ -457,7 +472,7 @@
 
 	.sub-atozgo .go-icon h1 {
 		font-family: "axiformaBold";
-		
+		color: white;
 	}
 
 	.go-icon .icon span {
@@ -482,8 +497,8 @@
 
 	.sub-atozgo {
 		padding: 50px 50px 100px 50px;
-		background-color: #f5d9cc;
-		/*		background-image: url(../img/atozpay/halftone-yellow.png);*/
+		background-image: linear-gradient(to right top, #f2693e, #f26838, #f26731, #f26629, #f26521);
+				background-image: url(../img/atozpay/bg-fitur.png);
 		background-repeat: repeat;
 		position: relative;
 		overflow: hidden;
@@ -498,8 +513,8 @@
 
 	.sub-atozgo .amsi {
 		position: absolute;
-		top: 20vh;
-		left: 24vw;
+		top: 50px;
+		left: 230px;
 		-webkit-animation: gerak 2s ease 2s infinite alternate;
 		-o-animation: gerak 2s ease 2s infinite alternate;
 		animation: gerak 3s ease 2s infinite alternate;
@@ -517,38 +532,48 @@
 
 	@keyframes gerak {
 		0% {
-			top: 15vh;
+			top: 30px;
 		}
 
 		100% {
-			top: 20vh;
-			left: 24vw;
+			top: 50px;
+			left: 230px;
 		}
 	}
 
-
-	.sub-atozgo .mockup .moc-case {
-		left: 280px;
-		bottom: 70px;
+	.mockup {
+		/*
+		position: relative;
+		width: 300px;
+		height: 300px;
+*/
 		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 655px;
+		height: 100%;
 	}
 
-	.moc-case .mobile {
-		width: 225px;
-		height: 425px;
+	.mockup .mobile {
+		max-width: 100%;
 		background-image: url(../img/atozpay/hand-min.png);
 		background-size: cover;
+		bottom: 0;
+		left: 141px;
+		position: absolute;
+		top: 98px;
+		width: 55%;
 	}
 
 
-	.mobile .screen {
+	.mockup .mobile .screen {
 		overflow: hidden;
-		position: absolute;
+		position: relative;
 		top: 7.1%;
-		bottom: 47.6%;
-		left: 37.49%;
-		right: 13.4%;
-		background-color: #f2693e;
+		left: 132px;
+		height: 342px;
+		width: 180px;
+		background-color: #f5d9cc;
 	}
 
 	.screen .slideshow {
@@ -567,24 +592,24 @@
 	}
 
 	.slideshow_item.slide_1 {
-		background-image: url(../img/atozpay/makan.png);
+		background-image: url(../img/atozpay/img_makanan.png);
 		background-size: cover;
 	}
 
 	.slideshow_item.slide_2 {
-		background-image: url(../img/atozpay/minuman.png);
+		background-image: url(../img/atozpay/img_minuman.png);
 		background-size: cover;
 	}
 
 	.slideshow_item.slide_3 {
-		background-image: url(../img/atozpay/kudapan.png);
+		background-image: url(../img/atozpay/img_cemilan.png);
 		background-size: cover;
 	}
 
 	.sub-atozgo .bg-subgo {
 		position: absolute;
-		bottom: -16px;
-		left: -56vw;
+		bottom: -5px;
+		left: -50vw;
 		right: 0;
 		height: 50vh;
 		z-index: 1;
@@ -914,6 +939,14 @@
 
 		nav .nav-sosmed {
 			justify-content: center;
+		}
+
+		.hand {
+			display: block;
+		}
+
+		.atozgo .go-ride {
+			margin-bottom: 70vh;
 		}
 
 		.profil img {
