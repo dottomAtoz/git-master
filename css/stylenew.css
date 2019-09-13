@@ -133,6 +133,7 @@
 	}
 
 	.mobile-header img {
+		display: none;
 		position: relative;
 		top: 200px;
 	}
@@ -310,8 +311,9 @@
 
 	.fitur-content .fitur-bdy p {
 		font-family: "appleReguler";
-		/*	font-size: 10px;*/
+		text-align: justify;
 	}
+
 
 	.download {
 		padding: 186px 171px 60px 171px;
@@ -498,8 +500,9 @@
 	.sub-atozgo {
 		padding: 50px 50px 100px 50px;
 		background-image: linear-gradient(to right top, #f2693e, #f26838, #f26731, #f26629, #f26521);
-				background-image: url(../img/atozpay/bg-fitur.png);
-		background-repeat: repeat;
+		background-image: url(../img/atozpay/bg-fitur.png);
+		background-repeat: no-repeat;
+		background-size: cover;
 		position: relative;
 		overflow: hidden;
 	}
