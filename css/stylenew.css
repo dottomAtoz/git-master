@@ -133,7 +133,6 @@
 	}
 
 	.mobile-header img {
-		display: none;
 		position: relative;
 		top: 200px;
 	}
@@ -500,7 +499,7 @@
 	.sub-atozgo {
 		padding: 50px 50px 100px 50px;
 		background-image: linear-gradient(to right top, #f2693e, #f26838, #f26731, #f26629, #f26521);
-		background-image: url(../img/atozpay/bg-fitur.png);
+		/*		background-image: url(../img/atozpay/bg-fitur.png);*/
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: relative;
@@ -545,16 +544,23 @@
 	}
 
 	.mockup {
-		/*
-		position: relative;
-		width: 300px;
-		height: 300px;
-*/
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		width: 655px;
 		height: 100%;
+	}
+
+	.mockup .circle-mockup {
+		border-radius: 50%;
+		background-color: #f5d9cc;
+		box-shadow: 20px 4px 0px 0px #f5b99d;
+		width: 500px;
+		bottom: 0;
+		/* top: 180px; */
+		left: 75px;
+		height: 500px;
+		position: absolute;
 	}
 
 	.mockup .mobile {
@@ -748,7 +754,7 @@
 	}
 
 	.footer-foot img {
-		width: 200px;
+		/*		width: 200px;*/
 	}
 
 	.footer-foot p {
