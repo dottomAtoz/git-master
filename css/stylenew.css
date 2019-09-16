@@ -77,14 +77,20 @@
 	}
 
 	header {
+
 		position: relative;
 		height: 100vh;
-		min-height: 13rem;
 		width: 100%;
 		overflow: hidden;
+		background: black;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 	}
 
-	header video {
+	/*
+	header iframe {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -97,6 +103,17 @@
 		-webkit-transform: translateX(-50%) translateY(-50%);
 		transform: translateX(-50%) translateY(-50%);
 		z-index: 0;
+	}
+*/
+
+	.video-foreground,
+	header iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 101%;
+		height: 110%;
+		pointer-events: none;
 	}
 
 	header .tagline {
@@ -926,7 +943,7 @@
 			background-color: orange;
 		}
 
-		header video {
+		header iframe {
 			display: none;
 		}
 
@@ -992,11 +1009,11 @@
 			padding: 20px !important;
 		}
 
-		/*
-			.profil img {
-		width: 32em;
-	}
-	*/
+		.video-foreground,
+		header iframe {
+			width: 100%;
+			height: 100%;
+		}
 
 		.download .container .dw_phn img {
 			width: 24vw;
