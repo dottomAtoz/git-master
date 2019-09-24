@@ -841,6 +841,10 @@
 			font-size: 35px;
 		}
 
+		.download_bdy {
+			padding: 0;
+		}
+
 	}
 
 	@media only screen and (max-width:425px) {
@@ -896,6 +900,12 @@
 		.download .container .dw_phn img,
 		.sub-atozgo .char img {
 			display: none;
+		}
+
+
+		.go-icon .icon {
+			padding: 10px;
+			margin: 0 0 5px 0;
 		}
 
 	}

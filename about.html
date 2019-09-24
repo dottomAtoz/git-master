@@ -15,6 +15,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/stylenew.css">
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/hamburgers.min.css">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -23,30 +24,30 @@
 			font-family: "appleReguler";
 		}
 
-		.about {
+
+		header {
 			background-image: url(img/gallery/atoz-1.jpeg);
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
-			max-height: 500px;
-			z-index: 1;
 		}
 
-		.title-about {
-			margin: 200px auto;
+		.text-tagline {
+			color: white;
+			font-family: 'axiformaBold';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
 			text-align: center;
-			position: relative;
-			z-index: 2;
+			width: 100%;
+			z-index: 3;
 		}
 
-		.about .title-about h1 {
-			font-size: 50px;
-			text-transform: none;
-		}
 
 		.atozpay-about {
 			padding: 80px;
-			text-align: justify
+			text-align: justify;
 		}
 
 		.footer {
@@ -58,27 +59,31 @@
 			color: white;
 		}
 
+		/*
+
 
 		@media only screen and (max-width:320px) {}
 
-		@media only screen and (max-width:375px) {
-			.atozpay-about {
-				padding: 10px !important;
-			}
-		}
+		@media only screen and (max-width:375px) {}
+*/
 
 		@media only screen and (max-width:425px) {
+			header .text-tagline {
+				top: 50%;
+			}
+
 			.atozpay-about {
 				padding: 20px;
 			}
 		}
 
+		/*
 		@media only screen and (max-width:768px) {}
 
 		@media only screen and (max-width:1024px) {}
+*/
 
 	</style>
-
 	<title>Atozpay</title>
 </head>
 
@@ -89,8 +94,11 @@
 			<a class="navbar-brand" href="#">
 				<img src="img/atozpay/logo.png">
 			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+
+			<button class="hamburger hamburger--slider" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -116,12 +124,6 @@
 					<li class="nav-item">
 						<a class="nav-link " href="index.html#faq">FAQ</a>
 					</li>
-					<li class="nav-item">
-						<!--						<a class="nav-link" href="#">Galery & Promo</a>-->
-					</li>
-					<li class="nav-item">
-						<!--						<a class="nav-link" href="#footer">Kontak</a>-->
-					</li>
 				</ul>
 				<ul class="nav justify-content-end nav-sosmed">
 					<li class="nav-item">
@@ -138,12 +140,10 @@
 		</div>
 	</nav>
 
-	<header class="about">
+	<header id="fullwidth-video">
 		<div class="pattern"></div>
-		<div class="title-about">
-			<div class="container">
-				<h1>Tentang Kami</h1>
-			</div>
+		<div class="container text-tagline">
+			<h1>Tentang Kami</h1>
 		</div>
 	</header>
 
@@ -271,6 +271,14 @@
 			loop: true,
 			autoplay: true,
 			autoplayTimeout: 2500
+		});
+
+		var $hamburger = $(".hamburger");
+		var $navbar = $(".navbar")
+		$hamburger.on("click", function(e) {
+			$hamburger.toggleClass("is-active");
+			$navbar.toggleClass("bg-white");
+			// Do something else, like open/close menu
 		});
 
 	</script>
