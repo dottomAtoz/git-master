@@ -58,12 +58,27 @@
 		left: 8px;
 	}
 
+	.hamburger-inner:before {
+		width: 25px !important;
+	}
+
+	.hamburger-inner,
+	.hamburger-inner:after,
+	.hamburger-inner:before {
+		background-color: #f16a3e !important;
+	}
+
+	button.hamburger {
+		display: none;
+	}
+
 	.navbar.solid {
 		background-color: white;
 		-webkit-transition: 0.8s ease;
 		-o-transition: 0.8s ease;
 		transition: 0.8s ease;
 	}
+
 
 	.nav-sosmed {
 		justify-content: flex-end;
@@ -76,57 +91,58 @@
 		padding: 10px;
 	}
 
-	header {
 
-		position: relative;
+	#fullwidth-video {
 		height: 100vh;
-		width: 100%;
+		min-height: 50vh;
+		position: relative;
+	}
+
+	#fullwidth-video .fullwidth-video-bg {
+		position: absolute;
+		z-index: 1;
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
 		overflow: hidden;
-		background: black;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
+		background-size: cover;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: 0% 50%;
 	}
 
-	/*
-	header iframe {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
-		-ms-transform: translateX(-50%) translateY(-50%);
-		-moz-transform: translateX(-50%) translateY(-50%);
-		-webkit-transform: translateX(-50%) translateY(-50%);
-		transform: translateX(-50%) translateY(-50%);
-		z-index: 0;
-	}
-*/
-
-	.video-foreground,
-	header iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 101%;
-		height: 110%;
-		pointer-events: none;
-	}
-
-	header .tagline {
-		position: absolute;
-		bottom: 10px;
+	.sldtext {
 		z-index: 2;
-		line-height: 35px;
 	}
 
-	.player {
-		/*	pointer-events: none;*/
-		/*	padding: 0 !important;*/
-		/*	margin-top: -40px;*/
+	#fullwidth-video video {
+		margin: auto;
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 0%;
+		transform: translate(0%, -50%);
+		visibility: visible;
+		opacity: 1;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	/** For Edge**/
+	/ @supports (-ms-ime-align:auto) {
+		#fullwidth-video video {
+			object-fit: none;
+			margin: none;
+			position: inherit;
+			z-index: 1;
+			top: 50%;
+			left: 0%;
+			transform: translate(0%, -50%);
+			height: auto;
+			width: 100%;
+		}
 	}
 
 	.pattern {
@@ -138,13 +154,14 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		z-index: 1;
+		z-index: 2;
 	}
 
 	.mobile-header {
+		bottom: 0;
 		display: none;
 		position: absolute;
-		bottom: 0;
+		overflow: hidden;
 		width: 100%;
 		text-align: center;
 	}
@@ -169,26 +186,19 @@
 		z-index: 1;
 	}
 
-	header .container h1 {
+	header .text-tagline {
+		color: white;
 		font-family: 'axiformaBold';
-		text-transform: uppercase;
-		/*	font-size: 55px;*/
-		font-size: 4em;
-		color: #f2693e;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 3;
 	}
 
-	header .container p {
-		font-family: 'axiformaBold';
-		/*	font-size: 30px;*/
-		font-size: 3em;
-		color: white;
-	}
-
-	header .container span {
-		font-family: 'axiformaBold';
-		/*	font-size: 25px;*/
-		font-size: 3em;
-		color: white;
+	header .text-tagline p {
+		font-size: 45px;
 	}
 
 	.profil {
@@ -812,115 +822,10 @@
 
 
 
-	/*
-	@media only screen and (max-width:320px) {
-
-		nav .navbar-brand img {
-			width: 200px;
-		}
-
-		nav .collapse ul {
-			text-align: center;
-		}
-
-		nav .nav-sosmed {
-			justify-content: center;
-		}
-
-		nav .nav-sosmed li a i {
-			letter-spacing: 0;
-			padding: 5px;
-		}
-
-		.nav-header .navbar-collapse ul li a:hover:before {
-			left: 43%;
-		}
-
-		header .container h1 {
-			font-size: 3em;
-		}
-
-		header .container p,
-		header .container span {
-			font-size: 2em;
-		}
-
-		.profil,
-		.sub-profil,
-		.fitur,
-		.download,
-		.atozpayagen,
-		.sub-fitur,
-		.atozgo,
-		.sub-fitur-more,
-		.sub-atozgo,
-		.faq,
-		.footer {
-			padding: 10px;
-		}
-
-		.profil img {
-			width: 172px;
-			filter: opacity(0.5);
-		}
-
-		.fitur .fitur-content {
-			margin-top: 0;
-		}
-
-		.download img.dw_img {
-			width: 100px;
-			filter: opacity(0.5);
-		}
-
-		.download_bdy {
-			padding: 0;
-		}
-
-		.download_bdy .bdy_img {
-			padding: 15px;
-		}
-
-		.profil h1,
-		.sub-profil h1,
-		.fitur h1,
-		.download_bdy h1,
-		.atozpaygen h1,
-		.sub-fitur-more h1,
-		.atozgo h1,
-		.faq h1 {
-			font-family: "axiformaBold";
-			color: #f2693e;
-			position: relative;
-			z-index: 1;
-		}
-
-		.download .container img.dw_phn {
-			display: none;
-		}
-
-		.atozpayagen h1 {
-			text-align: left !important;
-		}
-
-		.atozpayagen .bdy_atozpay {
-			margin-top: 25px;
-			padding: 30px 0px;
-		}
-
-		.atozpayagen .bdy_atozpay .btn-daftar {
-			margin-top: 0;
-			padding: 10px 25px;
-		}
-
-		.go-img .wr_btn img {
-			margin: 0;
-			width: 100%;
-		}
-	}
-	*/
-
 	@media only screen and (max-width:375px) {
+		.navbar-brand img {
+			width: 190px;
+		}
 
 		.atozpayagen .icon-atozpayagen {
 			bottom: -30px;
@@ -939,11 +844,12 @@
 	}
 
 	@media only screen and (max-width:425px) {
+
 		header {
 			background-color: orange;
 		}
 
-		header iframe {
+		header .fullwidth-video-bg {
 			display: none;
 		}
 
@@ -951,11 +857,9 @@
 			display: block;
 		}
 
-		header .tagline {
-			line-height: 35px;
-			font-size: 13px;
-			bottom: auto;
-			top: 117px;
+		header .text-tagline {
+			position: absolute;
+			top: 75px;
 			text-align: center;
 		}
 
@@ -1009,11 +913,13 @@
 			padding: 20px !important;
 		}
 
+		/*
 		.video-foreground,
 		header iframe {
 			width: 100%;
 			height: 100%;
 		}
+*/
 
 		.download .container .dw_phn img {
 			width: 24vw;
@@ -1045,11 +951,16 @@
 		}
 	}
 
+	@media only screen and (max-width: 991px) {
+		button.hamburger {
+			display: block;
+		}
+	}
 
 	@media only screen and (max-width: 1024px) {
 
 		nav .navbar-collapse ul li {
-			font-size: 13px;
+			font-size: 12px;
 		}
 
 		.profil img {
@@ -1080,6 +991,16 @@
 			left: auto;
 		}
 
+	}
+
+	@media only screen and (max-width: 1199px) {
+		.nav-sosmed a i {
+			padding: 5px;
+		}
+
+		.navbar-collapse ul.navbar-nav {
+			font-size: 12px;
+		}
 	}
 
 	/*

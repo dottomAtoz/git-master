@@ -15,6 +15,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/stylenew.css">
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/hamburgers.min.css">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -28,8 +29,16 @@
 			<a class="navbar-brand" href="#">
 				<img src="img/atozpay/logo.png">
 			</a>
+			<!--
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
+			</button>
+-->
+
+			<button class="hamburger hamburger--slider" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -77,28 +86,21 @@
 		</div>
 	</nav>
 
-	<header>
+	<header id="fullwidth-video">
 		<!--		<div class="overlay"></div>-->
 		<div class="pattern"></div>
 		<div class="mobile-header">
 			<img src="img/atozpay/atozpayuser.png" alt="mockup">
 		</div>
-		<!--
-		<video poster="img/atozpay/gedung.jpg" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-			<source src="img/atozpay/newatozpay2019.mp4" type="video/mp4">
-		</video>
--->
-		<!--		<iframe src="https://www.youtube.com/embed/OsEJtnGZdPc?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=OsEJtnGZdPc&mute=1&vq=720" frameborder="0" allowfullscreen></iframe>-->
-		<div class="video-foreground">
-			<iframe src="https://www.youtube.com/embed/OsEJtnGZdPc?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=OsEJtnGZdPc&mute=1&vq=720" frameborder="0" allowfullscreen></iframe>
+		<div class="fullwidth-video-bg">
+			<video poster="img/atozpay/gedung.jpg" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+				<source src="img/atozpay/newatozpay2019HD.mp4" type="video/mp4">
+				<source src="img/atozpay/newatozpay2019.mp4" type="video/mp4">
+			</video>
 		</div>
-		<div class="container">
-			<div class="row">
-				<div class="tagline">
-					<p>Transaksi Keperluan Apapun</p>
-					<span>#SemuaBisa</span>
-				</div>
-			</div>
+		<div class="container text-tagline">
+			<h1>Transaksi Keperluan Apapun</h1>
+			<p>#SemuaBisa</p>
 		</div>
 	</header>
 
@@ -624,7 +626,7 @@
 			// Transition effect for navbar
 			$(window).scroll(function() {
 				// checks if window is scrolled more than 500px, adds/removes solid class
-				if ($(this).scrollTop() > 80) {
+				if ($(this).scrollTop() > 50) {
 					$('.navbar').addClass('solid');
 				} else {
 					$('.navbar').removeClass('solid');
@@ -666,6 +668,14 @@
 			loop: true,
 			autoplay: true,
 			autoplayTimeout: 2500
+		});
+
+		var $hamburger = $(".hamburger");
+		var $navbar = $(".navbar")
+		$hamburger.on("click", function(e) {
+			$hamburger.toggleClass("is-active");
+			$navbar.toggleClass("bg-white");
+			// Do something else, like open/close menu
 		});
 
 	</script>
