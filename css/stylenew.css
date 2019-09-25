@@ -908,6 +908,19 @@
 			margin: 0 0 5px 0;
 		}
 
+		.hamburger-box {
+			width: 25px !important;
+		}
+
+		.hamburger-inner,
+		.hamburger-inner:after {
+			width: 25px !important;
+		}
+
+		.hamburger-inner:before {
+			width: 20px !important;
+		}
+
 	}
 
 	@media only screen and (max-width: 768px) {
