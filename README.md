@@ -18,3 +18,8 @@ Note:
 Untuk menghapus folder yang berisi banyak file, tambahkan flag -r
 
 $ git rm --cache folder/ -r
+
+
+inspirasi
+https://rogerdudler.github.io/git-guide/index.id.html
+https://cloudborneo.com/belajar-perintah-dasar-git-sebagai-version-control-system-dan-cara-hosting-repository-di-github/
