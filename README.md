@@ -1,25 +1,18 @@
-# GIT MASTER
-belajar git dari dasar menuju mahir
-
-Cara Menghapus File pada Git Repository
-16/08/2017 / ANTO
-Untuk menghapus file/folder pada git repository dapat menggunakan perintah git rm.
-
-$ git rm filename
-
-Tetapi jika anda hanya ingin menghapus file pada repository dan tidak menghapusnya pada file anda, tambahkan flag --cache
-
-$ git rm --cache filename
-
-Kemudian commit dan push ke repository anda.
-
-
-Note:
-Untuk menghapus folder yang berisi banyak file, tambahkan flag -r
-
-$ git rm --cache folder/ -r
-
-
-inspirasi
-https://rogerdudler.github.io/git-guide/index.id.html
-https://cloudborneo.com/belajar-perintah-dasar-git-sebagai-version-control-system-dan-cara-hosting-repository-di-github/
+![Git Logo](img/logo_git-master.png)
+# The Reminder Guide :sparkles:
+- [ ] Git Download
+- [ ] Git Config
+- [ ] Git Ignore
+- [ ] Git Init
+- [ ] Git Clone
+- [ ] Git Remote
+- [ ] Git Branch
+- [ ] Git Add
+- [ ] Git Commit
+- [ ] Git Log
+- [ ] Git Checkout
+- [ ] Git Fetch
+- [ ] Git Remove
+- [ ] Git Diff
+- [ ] Git Merge
+- [ ] Git Push
