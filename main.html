@@ -5,6 +5,9 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
+
+   <link rel="stylesheet" href="css/main.css">
+
    <!-- Google Fonts -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 
@@ -17,7 +20,7 @@
 
 <body>
 
-   belajar git dari dasar menuju mahir
+   <!-- belajar git dari dasar menuju mahir
 
    Cara Menghapus File pada Git Repository
    16/08/2017 / ANTO
@@ -41,8 +44,24 @@
 
    inspirasi
    https://rogerdudler.github.io/git-guide/index.id.html
-   https://cloudborneo.com/belajar-perintah-dasar-git-sebagai-version-control-system-dan-cara-hosting-repository-di-github/
+   https://cloudborneo.com/belajar-perintah-dasar-git-sebagai-version-control-system-dan-cara-hosting-repository-di-github/ -->
 
+   <div id="app">
+      {{ message }}
+   </div>
+
+   <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+   <script src="js/vue.js"></script>
+   <script>
+
+      var app = new Vue({
+         el: '#app',
+         data: {
+            message: 'Hello Vue!'
+         }
+      })
+      
+   </script>
 </body>
 
 </html>

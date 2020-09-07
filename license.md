@@ -1,5 +1,6 @@
 The MIT License (MIT)
 
+Design By Tommy Alhamra
 Copyright 2020 Tommy Alhamra
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
