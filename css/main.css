@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,13 +18,47 @@
 }
 
 #main nav {
+  letter-spacing: 2px;
+  font-weight: 500;
   text-align: center;
   padding: 20px 0;
   margin-bottom: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main nav .nav-item a {
+  color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 15px;
+}
+
+#main nav .nav-item a span {
+  padding-left: 10px;
+}
+
+#main nav .nav-item a:hover {
+  color: white;
+  text-decoration: overline;
+}
+
+#main nav .nav-item a:active {
+  color: #3641de;
 }
 
 #main .brand {
-  margin: 20px 0;
   text-align: center;
 }
 
@@ -40,8 +75,21 @@
   width: 100px;
   height: 50px;
   line-height: 70px;
-  color: white;
+}
+
+#main .btn a {
+  color: grey;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+#main .btn:hover {
+  cursor: pointer;
+  background-color: #DCED30;
+}
+
+#main .btn:hover a {
+  color: black;
+  font-weight: 700;
 }
 /*# sourceMappingURL=main.css.map */
