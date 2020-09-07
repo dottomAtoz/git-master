@@ -47,20 +47,37 @@
    https://cloudborneo.com/belajar-perintah-dasar-git-sebagai-version-control-system-dan-cara-hosting-repository-di-github/ -->
 
    <div id="app">
-      {{ message }}
+      <h1>Test Api</h1>
+      <div v-for="data in info">
+         {{ data.name }} : <b>{{data.catagory}}</b>
+      </div>
    </div>
 
    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
    <script src="js/vue.js"></script>
    <script>
-
       var app = new Vue({
          el: '#app',
-         data: {
-            message: 'Hello Vue!'
+         data() {
+            return {
+               info: null,
+               message: 'Hello Vue!'
+            }
+         },
+         mounted() {
+            axios
+               .get('https://my-json-server.typicode.com/imotD/PWA-Fun/db')
+               .then(response => {
+                  this.info = response.data.products
+               })
+               .catch(error => {
+                  console.log(error)
+                  this.errored = true
+               })
+               .finally(() => this.loading = false)
          }
       })
-      
    </script>
 </body>
 
