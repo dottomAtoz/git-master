@@ -87,3 +87,38 @@ $base-color:#3641de;
       }
    }
 }
+
+#app {
+   .nav {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #d8d8d8;
+      padding: 15px 0;
+
+      &__brand {
+         img {
+            width: 250px;
+         }
+      }
+
+      &__link {
+         align-items: center;
+         display: flex;
+
+         &--item {
+            a {
+               color: black;
+
+               ion-icon {
+                  width: 35px;
+                  height: 25px;
+               }
+
+               &:hover {
+                  color: $base-color;
+               }
+            }
+         }
+      }
+   }
+}
