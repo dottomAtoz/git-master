@@ -100,7 +100,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 2px solid #d8d8d8;
+  border-bottom: 3px solid #d8d8d8;
   padding: 15px 0;
 }
 
@@ -128,5 +128,25 @@
 
 #app .nav__link--item a:hover {
   color: #3641de;
+}
+
+#app main {
+  margin: 20px 0;
+}
+
+#app main .sidebar {
+  border-right: 3px solid #3641de;
+  border-radius: 1px;
+}
+
+#app footer {
+  background-color: #3641de;
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+}
+
+#app footer a {
+  color: yellow;
 }
 /*# sourceMappingURL=main.css.map */
