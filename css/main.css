@@ -100,7 +100,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 3px solid #d8d8d8;
+  border-bottom: 0.3rem solid #d8d8d8;
   padding: 15px 0;
 }
 
@@ -131,12 +131,28 @@
 }
 
 #app main {
+  position: relative;
+  min-height: 100vh;
   margin: 20px 0;
 }
 
 #app main .sidebar {
-  border-right: 3px solid #3641de;
+  border-right: 0.3rem solid #3641de;
   border-radius: 1px;
+  min-height: 100vh;
+}
+
+#app main .content {
+  margin-left: 10px;
+}
+
+#app main .content pre {
+  border-right: 0.3rem dashed #3641de;
+  border-left: none;
+}
+
+#app main .content code {
+  background: none;
 }
 
 #app footer {

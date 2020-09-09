@@ -92,7 +92,7 @@ $base-color:#3641de;
    .nav {
       display: flex;
       justify-content: space-between;
-      border-bottom: 3px solid #d8d8d8;
+      border-bottom: 0.3rem solid #d8d8d8;
       padding: 15px 0;
 
       &__brand {
@@ -123,11 +123,28 @@ $base-color:#3641de;
    }
 
    main {
+      position: relative;
+      min-height: 100vh;
       margin: 20px 0;
 
       .sidebar {
-         border-right: 3px solid $base-color;
+         border-right: 0.3rem solid $base-color;
          border-radius: 1px;
+         min-height: 100vh;
+      }
+
+      .content {
+         margin-left: 10px;
+
+         pre {
+            border-right: 0.3rem dashed $base-color;
+            border-left: none;
+            ;
+         }
+
+         code {
+            background: none;
+         }
       }
    }
 
@@ -136,6 +153,9 @@ $base-color:#3641de;
       text-align: center;
       color: white;
       padding: 20px 0;
+      // position: fixed;
+      // bottom: 0;
+      // width: 100%;
 
       a {
          color: yellow;
