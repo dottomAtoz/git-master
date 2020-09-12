@@ -69,6 +69,7 @@ $base-color:#3641de;
       width: 100px;
       height: 50px;
       line-height: 70px;
+      transition: background .5s;
 
       a {
          color: grey;
@@ -82,7 +83,7 @@ $base-color:#3641de;
 
          a {
             color: black;
-            font-weight: 700;
+            font-weight: 500;
          }
       }
    }
@@ -92,7 +93,7 @@ $base-color:#3641de;
    .nav {
       display: flex;
       justify-content: space-between;
-      border-bottom: 0.3rem solid #d8d8d8;
+      border-bottom: 1px solid #f2f2f2;
       padding: 15px 0;
 
       &__brand {
@@ -110,7 +111,7 @@ $base-color:#3641de;
                color: black;
 
                ion-icon {
-                  width: 35px;
+                  width: 40px;
                   height: 25px;
                }
 
@@ -136,10 +137,27 @@ $base-color:#3641de;
       .content {
          margin-left: 10px;
 
+         h2 {
+            color: black;
+            letter-spacing: 2px;
+            font-weight: 400;
+         }
+
+         p {
+            letter-spacing: .5px;
+         }
+
          pre {
             border-right: 0.3rem dashed $base-color;
             border-left: none;
-            ;
+            transition: background 0.5s;
+            padding: 15px 0;
+            color: black;
+
+            &:hover {
+               border-right: 0.3rem dashed $base-color;
+               background-color: yellow;               
+            }
          }
 
          code {
@@ -153,6 +171,8 @@ $base-color:#3641de;
       text-align: center;
       color: white;
       padding: 20px 0;
+      font-size: 14px;
+      letter-spacing: .6px;
       // position: fixed;
       // bottom: 0;
       // width: 100%;

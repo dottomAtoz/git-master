@@ -75,6 +75,8 @@
   width: 100px;
   height: 50px;
   line-height: 70px;
+  -webkit-transition: background .5s;
+  transition: background .5s;
 }
 
 #main .btn a {
@@ -90,7 +92,7 @@
 
 #main .btn:hover a {
   color: black;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 #app .nav {
@@ -100,7 +102,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 0.3rem solid #d8d8d8;
+  border-bottom: 1px solid #f2f2f2;
   padding: 15px 0;
 }
 
@@ -122,7 +124,7 @@
 }
 
 #app .nav__link--item a ion-icon {
-  width: 35px;
+  width: 40px;
   height: 25px;
 }
 
@@ -146,9 +148,28 @@
   margin-left: 10px;
 }
 
+#app main .content h2 {
+  color: black;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+#app main .content p {
+  letter-spacing: .5px;
+}
+
 #app main .content pre {
   border-right: 0.3rem dashed #3641de;
   border-left: none;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  padding: 15px 0;
+  color: black;
+}
+
+#app main .content pre:hover {
+  border-right: 0.3rem dashed #3641de;
+  background-color: yellow;
 }
 
 #app main .content code {
@@ -160,6 +181,8 @@
   text-align: center;
   color: white;
   padding: 20px 0;
+  font-size: 14px;
+  letter-spacing: .6px;
 }
 
 #app footer a {
