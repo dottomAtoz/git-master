@@ -79,7 +79,7 @@ $base-color:#3641de;
 
       &:hover {
          cursor: pointer;
-         background-color: #DCED30;
+         background-color: yellow;
 
          a {
             color: black;
@@ -132,6 +132,28 @@ $base-color:#3641de;
          border-right: 0.3rem solid $base-color;
          border-radius: 1px;
          min-height: 100vh;
+
+         .list__group {
+            &--item {
+               padding: 0;
+               display: block;
+               width: 100%;
+               background-color: transparent;
+               border: 1px solid transparent;
+               color: black;
+               text-align: start;
+               font-size: small;               
+
+               &:active {
+                  color: $base-color;
+               }
+            }
+
+            .active {
+               font-weight: 500;
+               color: $base-color;
+            }
+         }
       }
 
       .content {
@@ -141,6 +163,7 @@ $base-color:#3641de;
             color: black;
             letter-spacing: 2px;
             font-weight: 400;
+            text-transform: uppercase;
          }
 
          p {
@@ -156,7 +179,7 @@ $base-color:#3641de;
 
             &:hover {
                border-right: 0.3rem dashed $base-color;
-               background-color: yellow;               
+               background-color: yellow;
             }
          }
 

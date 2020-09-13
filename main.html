@@ -4,7 +4,8 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>G I T - Master by: ImotD</title>
+   <link rel="icon" type="image/png" href="img/icon.png">
 
    <link rel="stylesheet" href="css/main.css">
 
@@ -75,22 +76,21 @@
          <main>
             <div class="row">
                <div class="column column-25 sidebar">
-                  <ul>
-                     <li><a href="">Git Download</a></li>
-                     <li><a href="">Git Commit</a></li>
-                     <li><a href="">Git Status</a></li>
-                  </ul>
+                  <div class="list__group">
+                     <button class="list__group--item" v-for="i in info" :key="i.id">
+                        {{i.title}}                        
+                     </button>
+                  </div>
                </div>
-               <div class="column content" v-for="i in info" :key="i.id">
-                  <h2>{{i.title}}</h2>
-                  <p>{{i.description}}</p>
+               <div class="column content">
+                  <h2>{{info[1].title}}</h2>
+                  <p>{{info[1].description}}</p>
 
                   <code>
                      <pre>
-                       {{i.code}}
+                       {{info[1].code}}
                      </pre>
                   </code>
-
                </div>
             </div>
          </main>

@@ -87,7 +87,7 @@
 
 #main .btn:hover {
   cursor: pointer;
-  background-color: #DCED30;
+  background-color: yellow;
 }
 
 #main .btn:hover a {
@@ -144,6 +144,26 @@
   min-height: 100vh;
 }
 
+#app main .sidebar .list__group--item {
+  padding: 0;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: black;
+  text-align: start;
+  font-size: small;
+}
+
+#app main .sidebar .list__group--item:active {
+  color: #3641de;
+}
+
+#app main .sidebar .list__group .active {
+  font-weight: 500;
+  color: #3641de;
+}
+
 #app main .content {
   margin-left: 10px;
 }
@@ -152,6 +172,7 @@
   color: black;
   letter-spacing: 2px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 #app main .content p {
