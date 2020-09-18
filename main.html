@@ -5,6 +5,10 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>G I T - Master by: ImotD</title>
+   <meta name="description" 
+   content="Panduan lengkap belajar GIT hingga Master
+            di kemas dengan penjelasan sederhana berbahasa indonesia">
+
    <link rel="icon" type="image/png" href="img/icon.png">
 
    <link rel="stylesheet" href="css/main.css">
@@ -75,19 +79,25 @@
 
       </div>
 
-      <footer-component></footer-component>
+      <footer-component />
    </div>
 
    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
    <script src="js/vue.js"></script>
    <script>
-      
       Vue.component('footer-component', {
          template: `<footer>
-         Made with 🔥 by <a href="https://www.instagram.com/tommyalhamra/">imotD.</a>
-         Licensed under the <a href="https://github.com/imotD/git-master/blob/master/license.md">MIT License.</a>
-      </footer> `
+         Made with 🔥 by <a :href="link[0]">imotD.</a>
+         Licensed under the <a :href="link[1]">MIT License.</a>
+      </footer> `,
+         data() {
+            return {
+               link: ['https://www.instagram.com/tommyalhamra/',
+                  'https://github.com/imotD/git-master/blob/master/license.md'
+               ]
+            }
+         },
       })
 
       Vue.component('navbar-component', {
@@ -99,25 +109,33 @@
             </div>
             <div class="nav__link">
                <div class="nav__link--item">
-                  <a href="https://www.behance.net/gallery/103789891/Git-Master-Guide" target="_blank">
+                  <a :href="porto[0]" target="_blank" rel="noopener">
                      <ion-icon name="logo-behance"></ion-icon>
                   </a>
                </div>
                <div class="nav__link--item">
-                  <a href="https://medium.com/@tommyalhamra" target="_blank">
+                  <a :href="porto[1]" target="_blank" rel="noopener">
                      <ion-icon name="logo-medium"></ion-icon>
                   </a>
                </div>
                <div class="nav__link--item">
-                  <a href="https://github.com/imotD/git-master" target="_blank">
+                  <a :href="porto[2]" target="_blank" rel="noopener">
                      <ion-icon name="logo-github"></ion-icon>
                   </a>
                </div>
             </div>
-         </nav> `
+         </nav> `,
+         data() {
+            return {
+               porto: [
+                  'https://www.behance.net/gallery/103789891/Git-Master-Guide',
+                  'https://medium.com/@tommyalhamra', 'https://github.com/imotD/git-master'
+               ]
+            }
+         },
       })
 
-      var app = new Vue({
+      const app = new Vue({
          el: '#app',
          data() {
             return {
