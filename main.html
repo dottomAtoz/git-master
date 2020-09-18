@@ -49,36 +49,14 @@
 
    <div id="app">
       <div class="container">
-         <nav class="nav">
-            <div class="nav__brand">
-               <a href="index.html">
-                  <img src="img/logo_git-master.png" alt="brand">
-               </a>
-            </div>
-            <div class="nav__link">
-               <div class="nav__link--item">
-                  <a href="https://www.behance.net/dottomstyleart" target="_blank">
-                     <ion-icon name="logo-behance"></ion-icon>
-                  </a>
-               </div>
-               <div class="nav__link--item">
-                  <a href="https://medium.com/@tommyalhamra" target="_blank">
-                     <ion-icon name="logo-medium"></ion-icon>
-                  </a>
-               </div>
-               <div class="nav__link--item">
-                  <a href="https://github.com/imotD" target="_blank">
-                     <ion-icon name="logo-github"></ion-icon>
-                  </a>
-               </div>
-            </div>
-         </nav>
+         <navbar-component></navbar-component>
+
          <main>
             <div class="row">
                <div class="column column-25 sidebar">
                   <div class="list__group">
                      <button class="list__group--item" v-for="i in info" :key="i.id">
-                        {{i.title}}                        
+                        {{i.title}}
                      </button>
                   </div>
                </div>
@@ -94,23 +72,56 @@
                </div>
             </div>
          </main>
+
       </div>
-      <footer>
-         Made with 🔥 by <a href="https://www.instagram.com/tommyalhamra/">imotD.</a>
-         Licensed under the <a href="https://github.com/imotD/git-master/blob/master/license.md">MIT License.</a>
-      </footer>
+
+      <footer-component></footer-component>
    </div>
 
    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
    <script src="js/vue.js"></script>
    <script>
+      
+      Vue.component('footer-component', {
+         template: `<footer>
+         Made with 🔥 by <a href="https://www.instagram.com/tommyalhamra/">imotD.</a>
+         Licensed under the <a href="https://github.com/imotD/git-master/blob/master/license.md">MIT License.</a>
+      </footer> `
+      })
+
+      Vue.component('navbar-component', {
+         template: `<nav class="nav">
+            <div class="nav__brand">
+               <a href="index.html">
+                  <img src="img/logo_git-master.png" alt="brand">
+               </a>
+            </div>
+            <div class="nav__link">
+               <div class="nav__link--item">
+                  <a href="https://www.behance.net/gallery/103789891/Git-Master-Guide" target="_blank">
+                     <ion-icon name="logo-behance"></ion-icon>
+                  </a>
+               </div>
+               <div class="nav__link--item">
+                  <a href="https://medium.com/@tommyalhamra" target="_blank">
+                     <ion-icon name="logo-medium"></ion-icon>
+                  </a>
+               </div>
+               <div class="nav__link--item">
+                  <a href="https://github.com/imotD/git-master" target="_blank">
+                     <ion-icon name="logo-github"></ion-icon>
+                  </a>
+               </div>
+            </div>
+         </nav> `
+      })
+
       var app = new Vue({
          el: '#app',
          data() {
             return {
                info: null,
-               message: 'Hello Vue!'
             }
          },
          mounted() {
