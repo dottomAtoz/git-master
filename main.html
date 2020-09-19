@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" prefix="og: http://ogp.me/ns#">
 
 <head>
    <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>G I T - Master by: ImotD</title>
-   <meta name="description" 
-   content="Panduan lengkap belajar GIT hingga Master
-            di kemas dengan penjelasan sederhana berbahasa indonesia">
-
-   <link rel="icon" type="image/png" href="img/icon.png">
-
+   <title>G I T - Master</title>
    <link rel="stylesheet" href="css/main.css">
-
-   <!-- Google Fonts -->
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 
    <!-- CSS Reset -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
 
    <!-- Milligram CSS -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
+   <meta name="keywords" content="GIT guide panduan git master ">
+   <meta name="description" content="Panduan lengkap pengingat belajar GIT hingga Master
+            di kemas dengan penjelasan sederhana berbahasa indonesia">
+   <!-- --- -->
+   <meta property="og:type" content="website">
+   <meta property="og:site_name" content="GIT Master">
+   <meta property="og:url" content="https://imotd.github.io/git-master/">
+   <meta property="og:title" content="G I T - Master">
+   <meta property="og:description" content="Panduan lengkap pengingat belajar GIT hingga Master
+   di kemas dengan penjelasan sederhana berbahasa indonesia">
+   <!-- <meta property="og:image" content="Gambar yang merepresentasikan halaman">
+   <meta property="og:image:secure_url" content="Gambar yang merepresentasikan halaman"> -->
+   <meta property="og:image:type" content=".png">
+   <!-- <meta property="og:image:width" content="Ukuran lebar gambar">
+   <meta property="og:image:height" content="Ukuran tinggi gambar"> -->
+   <meta property="og:image:alt" content="bg">
+   <meta name="theme-color" content="#3641de">
+
+   <link rel="icon" type="image/png" href="img/icon.png">
+   <link rel="icon" sizes="192x192" href="img/icon.png">
 </head>
 
 <body>
@@ -57,23 +70,25 @@
 
          <main>
             <div class="row">
-               <div class="column column-25 sidebar">
+               <aside class="column column-25 sidebar">
                   <div class="list__group">
                      <button class="list__group--item" v-for="i in info" :key="i.id">
                         {{i.title}}
                      </button>
                   </div>
-               </div>
-               <div class="column content">
-                  <h2>{{info[1].title}}</h2>
+               </aside>
+               <article class="column content">
+                  <!-- <h2>{{info[1].title}}</h2>
                   <p>{{info[1].description}}</p>
 
                   <code>
                      <pre>
                        {{info[1].code}}
                      </pre>
-                  </code>
-               </div>
+                  </code> -->
+
+                  <main-component num='1'></main-component>
+               </article>
             </div>
          </main>
 
@@ -85,76 +100,24 @@
    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
    <script src="js/vue.js"></script>
-   <script>
-      Vue.component('footer-component', {
-         template: `<footer>
-         Made with 🔥 by <a :href="link[0]">imotD.</a>
-         Licensed under the <a :href="link[1]">MIT License.</a>
-      </footer> `,
-         data() {
-            return {
-               link: ['https://www.instagram.com/tommyalhamra/',
-                  'https://github.com/imotD/git-master/blob/master/license.md'
-               ]
-            }
-         },
-      })
-
-      Vue.component('navbar-component', {
-         template: `<nav class="nav">
-            <div class="nav__brand">
-               <a href="index.html">
-                  <img src="img/logo_git-master.png" alt="brand">
-               </a>
-            </div>
-            <div class="nav__link">
-               <div class="nav__link--item">
-                  <a :href="porto[0]" target="_blank" rel="noopener">
-                     <ion-icon name="logo-behance"></ion-icon>
-                  </a>
-               </div>
-               <div class="nav__link--item">
-                  <a :href="porto[1]" target="_blank" rel="noopener">
-                     <ion-icon name="logo-medium"></ion-icon>
-                  </a>
-               </div>
-               <div class="nav__link--item">
-                  <a :href="porto[2]" target="_blank" rel="noopener">
-                     <ion-icon name="logo-github"></ion-icon>
-                  </a>
-               </div>
-            </div>
-         </nav> `,
-         data() {
-            return {
-               porto: [
-                  'https://www.behance.net/gallery/103789891/Git-Master-Guide',
-                  'https://medium.com/@tommyalhamra', 'https://github.com/imotD/git-master'
-               ]
-            }
-         },
-      })
-
-      const app = new Vue({
-         el: '#app',
-         data() {
-            return {
-               info: null,
-            }
-         },
-         mounted() {
-            axios
-               .get('https://my-json-server.typicode.com/imotD/git-master/db')
-               .then(response => {
-                  this.info = response.data.info
-               })
-               .catch(error => {
-                  console.log(error)
-                  this.errored = true
-               })
-               .finally(() => this.loading = false)
-         }
-      })
+   <script src="js/main.js"></script>
+   <script type="application/ld+json">
+      {
+         "@context": "http://schema.org/",
+         "@type": "BreadcrumbList",
+         "name": "ImotD",
+         "jobTitle": "Student",
+         "url": "https://imotd.github.io/git-master/"
+         "itemListElement": [{
+               "@type": "ListItem",
+               "position": 1,
+               "item": {
+                  "@id": "https://imotd.github.io/git-master/main",
+                  "name": "Guide"
+               }
+            }         
+         ]
+      }
    </script>
 </body>
 
