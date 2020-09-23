@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>G I T - Master</title>
+   <title>Panduan Git - The Reminder Guide</title>
    <link rel="stylesheet" href="css/main.css">
 
    <!-- CSS Reset -->
@@ -72,20 +72,20 @@
             <div class="row">
                <aside class="column column-25 sidebar">
                   <div class="list__group">
-                     <button class="list__group--item" v-for="i in info" :key="i.id">
+                     <button v-on:click="content" class="list__group--item" v-for="i in info" :key="i.id">
                         {{i.title}}
                      </button>
                   </div>
                </aside>
                <article class="column content">
-                  <!-- <h2>{{info[1].title}}</h2>
+                  <h2>{{info[1].title}}</h2>
                   <p>{{info[1].description}}</p>
 
                   <code>
                      <pre>
                        {{info[1].code}}
                      </pre>
-                  </code> -->
+                  </code>
 
                   <main-component num='1'></main-component>
                </article>
@@ -109,14 +109,13 @@
          "jobTitle": "Student",
          "url": "https://imotd.github.io/git-master/"
          "itemListElement": [{
-               "@type": "ListItem",
-               "position": 1,
-               "item": {
-                  "@id": "https://imotd.github.io/git-master/main",
-                  "name": "Guide"
-               }
-            }         
-         ]
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+               "@id": "https://imotd.github.io/git-master/main",
+               "name": "Guide"
+            }
+         }]
       }
    </script>
 </body>

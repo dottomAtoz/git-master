@@ -88,5 +88,10 @@ const app = new Vue({
             this.errored = true
          })
          .finally(() => this.loading = false)
-   }
+   },
+   methods: {
+      content: function (e) {
+         console.log(`test ${e}`);
+      }
+   },
 })
