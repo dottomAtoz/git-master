@@ -72,22 +72,22 @@
             <div class="row">
                <aside class="column column-25 sidebar">
                   <div class="list__group">
-                     <button v-on:click="content" class="list__group--item" v-for="i in info" :key="i.id">
+                     <button @click="content(i.id)" class="list__group--item" v-for="i in info" :key="i.id">
                         {{i.title}}
                      </button>
                   </div>
                </aside>
                <article class="column content">
-                  <h2>{{info[1].title}}</h2>
-                  <p>{{info[1].description}}</p>
+                  {{test}}
+                  <!-- <p>{{info[1].description}}</p>
 
                   <code>
                      <pre>
                        {{info[1].code}}
                      </pre>
-                  </code>
+                  </code> -->
 
-                  <main-component num='1'></main-component>
+                  <!-- <main-component :num='info.id'></main-component> -->
                </article>
             </div>
          </main>

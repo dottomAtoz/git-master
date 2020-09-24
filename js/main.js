@@ -1,3 +1,5 @@
+Vue.config.ignoredElements = [/^ion-/]
+
 Vue.component('navbar-component', {
    template: `<nav class="nav">
       <div class="nav__brand">
@@ -49,15 +51,9 @@ Vue.component('footer-component', {
 
 Vue.component('main-component', {
    props: ['num'],
-   template: `<div>
-      <h2>{{info[1].title}}</h2>{{num}}
-            <p>{{info[1].description}}</p>
-
-            <code>
-               <pre>
-                 {{info[1].code}}
-               </pre>
-            </code>
+   template: `
+   <div>
+      <h2>{{num}}</h2>  
    </div>`,
    data() {
       return {
@@ -71,10 +67,16 @@ const app = new Vue({
    data() {
       return {
          info: null,
-         post: {
-            id: 1,
-            title: 'My Journey with Vue'
-         }
+         post: [{
+               id: 1,
+               title: 'My Journey with Vue'
+            },
+            {
+               id: 2,
+               title: 'My Diary with Vue'
+            }
+         ],
+         test: ''
       }
    },
    mounted() {
@@ -90,8 +92,9 @@ const app = new Vue({
          .finally(() => this.loading = false)
    },
    methods: {
-      content: function (e) {
-         console.log(`test ${e}`);
+      content: function (key) {
+         // this.info = `{{info[${key}].title}}` 
+         this.test = key
       }
    },
 })
