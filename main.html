@@ -34,6 +34,19 @@
 
    <link rel="icon" type="image/png" href="img/icon.png">
    <link rel="icon" sizes="192x192" href="img/icon.png">
+   
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240468-1"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+         dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-180240468-1');
+   </script>
 </head>
 
 <body>
@@ -77,18 +90,7 @@
                      </button>
                   </div>
                </aside>
-               <article class="column content">
-                  {{test}}
-                  <!-- <p>{{info[1].description}}</p>
-
-                  <code>
-                     <pre>
-                       {{info[1].code}}
-                     </pre>
-                  </code> -->
-
-                  <!-- <main-component :num='info.id'></main-component> -->
-               </article>
+               <main-component :num='1'></main-component>
             </div>
          </main>
 
