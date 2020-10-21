@@ -26,15 +26,15 @@
    di kemas dengan penjelasan sederhana berbahasa indonesia">
    <!-- <meta property="og:image" content="Gambar yang merepresentasikan halaman">
    <meta property="og:image:secure_url" content="Gambar yang merepresentasikan halaman"> -->
-   <meta property="og:image:type" content=".png">
    <!-- <meta property="og:image:width" content="Ukuran lebar gambar">
    <meta property="og:image:height" content="Ukuran tinggi gambar"> -->
+   <meta property="og:image:type" content=".png">
    <meta property="og:image:alt" content="bg">
    <meta name="theme-color" content="#3641de">
 
    <link rel="icon" type="image/png" href="img/icon.png">
    <link rel="icon" sizes="192x192" href="img/icon.png">
-   
+
    <!-- Global site tag (gtag.js) - Google Analytics -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240468-1"></script>
    <script>
@@ -78,23 +78,32 @@
    https://cloudborneo.com/belajar-perintah-dasar-git-sebagai-version-control-system-dan-cara-hosting-repository-di-github/ -->
 
    <div id="app">
-      <div class="container">
-         <navbar-component></navbar-component>
-
-         <main>
+      <navbar-component></navbar-component>
+      <main>
+         <div class="container">
             <div class="row">
                <aside class="column column-25 sidebar">
-                  <div class="list__group">
-                     <button @click="content(i.id)" class="list__group--item" v-for="i in info" :key="i.id">
-                        {{i.title}}
-                     </button>
-                  </div>
+                  <ul class="list__group">
+                     <li v-for="(i , info ) in info" :key="i.id">
+                        <a class="button button-clear list__group--item" :href="i.link">
+                           {{i.title}}
+                        </a>
+                     </li>
+                  </ul>
                </aside>
-               <main-component :num='1'></main-component>
+               <article class="column content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quisquam inventore delectus magni
+                  nesciunt ab similique veniam maxime consequuntur ullam? Vitae, fugiat! Officiis minus, totam fuga
+                  voluptates odio quia explicabo corporis voluptate ipsam sequi veniam recusandae alias nobis, deleniti
+                  dignissimos praesentium unde eveniet fugit quam. Dignissimos, veniam. Quasi libero expedita dolorem,
+                  velit repellat nesciunt quos pariatur! Nulla est unde tempore assumenda saepe rerum, officia illum
+                  praesentium nihil delectus et in molestiae voluptate sunt deserunt nesciunt laboriosam atque dolorem
+                  porro quas cum doloremque, non sequi? Nisi, nam! Voluptatibus, quia, recusandae eum atque repellendus
+                  quam quod ex porro maiores cumque similique tenetur!
+               </article>
             </div>
-         </main>
-
-      </div>
+         </div>
+      </main>
 
       <footer-component />
    </div>
