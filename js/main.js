@@ -51,6 +51,12 @@ Vue.component('footer-component', {
    },
 })
 
+Vue.component('alert', {
+   props: ['bg', 'bold', 'msg'],
+   template: `<div class="alert alert-bg" role="alert">
+   <b>{{bold}}</b>
+   {{msg}}</div>`,
+})
 // Vue.component('main-component', {
 //    props: ['num'],
 //    template: `   

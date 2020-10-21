@@ -195,6 +195,21 @@ $base-color:#3641de;
          code {
             background: none;
          }
+
+         .alert {
+            border-radius: 5px;
+            padding: 15px;
+         }
+
+         .alert-success {
+            color: green;
+            background-color: greenyellow;
+         }
+
+         .alert-warning {
+            color: red;
+            background-color: #ffbaba;
+         }
       }
    }
 

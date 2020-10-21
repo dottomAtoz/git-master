@@ -209,6 +209,21 @@
   background: none;
 }
 
+#app main .content .alert {
+  border-radius: 5px;
+  padding: 15px;
+}
+
+#app main .content .alert-success {
+  color: green;
+  background-color: greenyellow;
+}
+
+#app main .content .alert-warning {
+  color: red;
+  background-color: #ffbaba;
+}
+
 #app footer {
   background-color: #3641de;
   text-align: center;
