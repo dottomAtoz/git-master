@@ -84,15 +84,22 @@
             <div class="row">
                <aside class="column column-25 sidebar">
                   <ul class="list__group">
-                     <li v-for="(i , info ) in info" :key="i.id">
-                        <a class="button button-clear list__group--item" :href="i.link">
-                           {{i.title}}
-                        </a>
-                     </li>
+                     <template v-if="view">
+                        <li v-for="(i , info ) in info" :key="i.id">
+                           <a class="button button-clear list__group--item" :href="i.link">
+                              {{i.title}}
+                           </a>
+                        </li>
+                     </template>
+                     <li v-else>Saat ini masih dalam tahap pengembangan</li>
                   </ul>
                </aside>
                <article class="column content">
-                  <alert bg="success" bold="Danger" msg="Alert ini untuk pesan sukses"></alert>
+                  <!-- <alert bg="success" bold="Danger" msg="Alert ini untuk pesan sukses"></alert> -->
+                  <template v-if="view">
+                     {{info}}
+                  </template>
+                  <p v-else>Saat ini masih dalam tahap pengembangan</p>
                </article>
             </div>
          </div>
@@ -102,8 +109,9 @@
    </div>
 
    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+   <script src="js/axios.js"></script>
    <script src="js/vue.js"></script>
+   <script src="js/router.js"></script>
    <script src="js/main.js"></script>
    <script type="application/ld+json">
       {
