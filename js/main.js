@@ -1,7 +1,7 @@
 Vue.config.ignoredElements = [/^ion-/]
 
 Vue.component('navbar-component', {
-   template: `<nav class="">
+   template: `<nav class="fixed-nav">
       <div class="container nav">
          <div class="nav__brand">
             <a href="index.html">
@@ -60,7 +60,7 @@ Vue.component('alert', {
 
 const Home = {
    template: `
-   <section id="main">
+   <section class="front">
       <nav>
          Support me on :
          <div class="nav-item">
@@ -95,7 +95,38 @@ const Home = {
 }
 
 const Guide = {
-   template: '<div>Guide Page</div>'
+   template: `
+   <div>
+      <navbar-component></navbar-component>
+      <main>
+         <div class="container">
+            <div class="row">
+               <aside class="column column-25 sidebar">
+                  <ul class="list__group">
+                     <template v-if="view">
+                        <li v-for="(i , info ) in info" :key="i.id">
+                           <a class="button button-clear list__group--item" :href="i.link">
+                              {{i.title}}
+                           </a>
+                        </li>
+                     </template>
+                     <li v-else>Saat ini masih dalam tahap pengembangan</li>
+                  </ul>
+               </aside>
+               <article class="column content">
+                  <!-- <alert bg="success" bold="Danger" msg="Alert ini untuk pesan sukses"></alert> -->
+                  <template v-if="view">
+                     {{info}}
+                  </template>
+                  <p v-else>Saat ini masih dalam tahap pengembangan</p>
+               </article>
+            </div>
+      </div>
+   </main>
+
+   <footer-component />
+   </div>
+   `
 }
 
 const routes = [{
@@ -110,7 +141,7 @@ const routes = [{
 ]
 
 const router = new VueRouter({
-   mode: 'history',
+   // mode: 'history',
    routes // short for `routes: routes`
 })
 

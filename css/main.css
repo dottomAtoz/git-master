@@ -7,7 +7,12 @@
   scroll-behavior: smooth;
 }
 
-#main {
+#app {
+  position: relative;
+  width: 100%;
+}
+
+#app .front {
   height: 100vh;
   background-color: black;
   background-image: url(../img/bg.png);
@@ -17,7 +22,7 @@
   position: relative;
 }
 
-#main nav {
+#app .front nav {
   letter-spacing: 2px;
   font-weight: 500;
   text-align: center;
@@ -34,7 +39,7 @@
           justify-content: center;
 }
 
-#main nav .nav-item a {
+#app .front nav .nav-item a {
   color: grey;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,24 +50,24 @@
   margin-left: 15px;
 }
 
-#main nav .nav-item a span {
+#app .front nav .nav-item a span {
   padding-left: 10px;
 }
 
-#main nav .nav-item a:hover {
+#app .front nav .nav-item a:hover {
   color: white;
   text-decoration: overline;
 }
 
-#main nav .nav-item a:active {
+#app .front nav .nav-item a:active {
   color: #3641de;
 }
 
-#main .brand {
+#app .front .brand {
   text-align: center;
 }
 
-#main .btn {
+#app .front .btn {
   position: absolute;
   background-color: black;
   border-top-left-radius: 110px;
@@ -79,28 +84,23 @@
   transition: background .5s;
 }
 
-#main .btn a {
+#app .front .btn a {
   color: grey;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-#main .btn:hover {
+#app .front .btn:hover {
   cursor: pointer;
   background-color: yellow;
 }
 
-#main .btn:hover a {
+#app .front .btn:hover a {
   color: black;
   font-weight: 500;
 }
 
-#app {
-  position: relative;
-  width: 100%;
-}
-
-#app nav {
+#app .fixed-nav {
   background-color: white;
   position: fixed;
   top: 0;
