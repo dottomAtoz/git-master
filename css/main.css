@@ -149,12 +149,12 @@
   position: relative;
   margin: 80px 0 0 0;
   padding: 30px 0;
+  min-height: calc(100vh - 142px);
 }
 
 #app main .sidebar {
   border-right: 0.3rem solid #3641de;
   border-radius: 1px;
-  min-height: 100vh;
 }
 
 #app main .sidebar .list__group {

@@ -139,11 +139,12 @@ $base-color:#3641de;
       // min-height: 100vh;
       margin: 80px 0 0 0;
       padding: 30px 0;
+      min-height: calc(100vh - 142px);
 
       .sidebar {
          border-right: 0.3rem solid $base-color;
          border-radius: 1px;
-         min-height: 100vh;
+
 
          .list__group {
             list-style: none;
