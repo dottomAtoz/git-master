@@ -145,23 +145,23 @@
   color: #3641de;
 }
 
-#app main {
+#app .wrapper {
   position: relative;
   margin: 80px 0 0 0;
   padding: 30px 0;
   min-height: calc(100vh - 142px);
 }
 
-#app main .sidebar {
+#app .wrapper .sidebar {
   border-right: 0.3rem solid #3641de;
   border-radius: 1px;
 }
 
-#app main .sidebar .list__group {
+#app .wrapper .sidebar .list__group {
   list-style: none;
 }
 
-#app main .sidebar .list__group--item {
+#app .wrapper .sidebar .list__group--item {
   padding: 0;
   display: block;
   width: 100%;
@@ -172,26 +172,26 @@
   font-size: small;
 }
 
-#app main .sidebar .list__group--item:active {
+#app .wrapper .sidebar .list__group--item:active {
   color: #3641de;
 }
 
-#app main .content {
+#app .wrapper .content {
   margin-left: 10px;
 }
 
-#app main .content h2 {
+#app .wrapper .content h2 {
   color: black;
   letter-spacing: 2px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-#app main .content p {
+#app .wrapper .content p {
   letter-spacing: .5px;
 }
 
-#app main .content pre {
+#app .wrapper .content pre {
   border-right: 0.3rem dashed #3641de;
   border-left: none;
   -webkit-transition: background 0.5s;
@@ -200,26 +200,26 @@
   color: black;
 }
 
-#app main .content pre:hover {
+#app .wrapper .content pre:hover {
   border-right: 0.3rem dashed #3641de;
   background-color: yellow;
 }
 
-#app main .content code {
+#app .wrapper .content code {
   background: none;
 }
 
-#app main .content .alert {
+#app .wrapper .content .alert {
   border-radius: 5px;
   padding: 15px;
 }
 
-#app main .content .alert-success {
+#app .wrapper .content .alert-success {
   color: green;
   background-color: greenyellow;
 }
 
-#app main .content .alert-warning {
+#app .wrapper .content .alert-warning {
   color: red;
   background-color: #ffbaba;
 }

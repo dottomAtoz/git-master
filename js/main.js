@@ -51,13 +51,6 @@ Vue.component('footer-component', {
    },
 })
 
-Vue.component('alert', {
-   props: ['bg', 'bold', 'msg'],
-   template: `<div class="alert alert-bg" role="alert">
-   <b>{{bold}}</b>
-   {{msg}}</div>`,
-})
-
 const Home = {
    template: `
    <section class="front">
@@ -98,7 +91,7 @@ const Guide = {
    template: `
    <div>
       <navbar-component></navbar-component>
-      <main>
+      <main class="wrapper">
          <div class="container">
             <div class="row">
                <aside class="column column-25 sidebar">
