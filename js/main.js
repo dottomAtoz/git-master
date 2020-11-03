@@ -31,7 +31,7 @@ Vue.component('navbar-component', {
       return {
          porto: [
             'https://www.behance.net/gallery/103789891/Git-Master-Guide',
-            'https://medium.com/@tommyalhamra', 'https://github.com/imotD/git-master'
+            'https://tommyalhamra.medium.com/git-master-the-reminder-guide-5851af851e74', 'https://github.com/imotD/git-master'
          ],
       }
    },
@@ -122,6 +122,13 @@ const Guide = {
    `
 }
 
+const NotFound = {
+   template: `
+   <div class="offline">
+   </div>
+   `
+}
+
 const routes = [{
       path: '/',
       component: Home
@@ -129,6 +136,10 @@ const routes = [{
    {
       path: '/guide',
       component: Guide
+   },
+   {
+      path: '*',
+      component: NotFound
    }
 
 ]
