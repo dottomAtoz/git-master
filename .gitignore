@@ -17,6 +17,11 @@
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
 ### vscode ###
 .vscode/*
 !.vscode/settings.json
@@ -32,5 +37,3 @@ node_modules/
 dist/
 npm-debug.log
 yarn-error.log
-
-# End of https://www.toptal.com/developers/gitignore/api/linux,vscode,vuejs
