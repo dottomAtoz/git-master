@@ -1,5 +1,8 @@
-<<<<<<< HEAD
+
 => ini dari local
-=======
+
 ini update dari cloud
->>>>>>> 0a34a9c (Update featureD.txt)
+
+=> ini dari local
+ini update dari cloud
+==== no rebase ===
