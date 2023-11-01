@@ -1,0 +1,9 @@
+ini adalah fitur D1
+
+=> update dari cloud
+=> update dari local
+
+=== rebase ===
+
+=> local again
+=> cloud again
